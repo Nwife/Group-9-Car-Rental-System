@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;;
+}
+
+.sidenav h3 a{
+    display: flex;
+}
+
+.sidenav h3 a svg{
+    margin-right: 18px;
+}
+
+.group9{
+  margin-bottom: 30px;
+}
+
+.group9 a{
+  text-decoration: none;
+  font-size: 24px;
+  color: white;
+  font-weight: 700; 
+}
+
+.sidenav {
+    height: 100vh;
+    width: 300px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(rgb(114, 41, 114), black);
+    overflow-x: hidden;
+    padding: 25px 20px;
+  }
+
+  .sidenav_item {
+    padding: 18px 0;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    align-items: center;
+    transition: all .8s;
+    cursor: pointer;
+  }
+  
+  .sidenav_item:hover {
+    color: #ff00f2;
+  }
+
+  .sidenav_item span{
+    margin-left: 10px;
+  }
+
+  .main{
+    margin-left: 300px;
+  }
+
+  header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px;
+    border-bottom: 1px solid rgb(204, 204, 204);
+  }
+
+  header h3{
+    color: black;
+    float: left;
+    margin-bottom: 5px;
+  }
+
+  header h4 {
+    display: flex;
+}
+
+  .main h4 svg{
+    margin-right: 10px;
+}
+
+.cards{
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  /* background-color: cornflowerblue; */
+}
+  
+.firsthold{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardbody{
+  background-image: linear-gradient(rgb(114, 41, 114), black);
+  /* margin: 15px 80px 15px 15px; */
+  /* padding: 60 140px; */
+  width: 300px;
+  height: 155px;
+  font-size: 30px;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all .8s;
+  cursor: pointer;
+}
+
+.innertext p{
+  font-size: 16px;
+}
+
+/* For the manage vehicles */
+.mainholder{
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.title1{
+  display: flex;
+  align-items:center;
+}
+
+.title1 span{
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+.button1 button{
+  display: flex;
+  align-items: center;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 5px;
+  background-image: linear-gradient(rgb(114, 41, 114), black);
+
+}
+
+.button1 button a{
+  text-decoration: none;
+  color: white;
+}
+.no{
+  margin-top: 10px;
+  padding-left: 14px;
+  font-size: small;
+}
+
+.tablon{
+  padding-left: 14px;
+  margin-top: 30px;
+}
+
+table td, th{
+  padding: 14px;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  margin: 0;
+  text-align: center;
+}
+
+table tr:first-child, table tr:last-child{
+  border: 1px solid black;
+}
+
+table{
+  border: 1px solid black;
+    border-collapse: collapse;
+    width: 1000px;
+}
+
+table tr:nth-of-type(odd){
+  background-color: rgba(144, 107, 132, 0.09);
+}
+
+.edits a svg{
+  margin-right: 7px;
+  border: 1px solid black;
+  border-radius: 50px;
+}
+
+.edits a{
+  text-decoration: none;
+}
+
+/* style for total bookings*/
+.delete{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.delete svg{
+  margin-right: 10px;
+}
+
+/* style for add vehicle*/
+form{
+  margin-top: 60px;
+}
+
+.section1 label{
+  font-size: 13px;
+}
+
+.section1{
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.innerform input{
+  margin-top: 20px;
+  padding: 5px 5px;
+  width: 200px;
+  border-radius: 3px;
+  border: 1px solid rgb(136, 18, 136);
+}
+
+.section2 {
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.outerform label{
+  font-size: 13px;
+}
+
+.outerform textarea{
+  display: block;
+  margin-top: 20px;
+  width: 600px;
+  border-radius: 3px;
+  border: 1px solid rgb(136, 18, 136);
+  resize: none;
+}
+
+.outerform input{
+  display: block;
+  border: 1px solid rgb(136, 18, 136);
+  margin-top: 20px;
+  height: 165px;
+  border-radius: 3px;
+  padding-top: 140px;
+  padding-left: 5px;
+  width: 450px;
+}
+
+.part2{
+ padding-right: 100px;
+}
+
+.add{
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-top: 50px;
+}
+
+.add input{
+  padding: 10px 10px;
+  width: 250px;
+  color: white;
+  border-radius: 3px;
+  font-size: 13px;
+  background-color: rgb(88, 39, 88);
+}
