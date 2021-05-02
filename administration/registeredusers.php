@@ -1,5 +1,23 @@
 <?php echo "<link rel='stylesheet' href='adminindex.css'>" ?>
 
+<?php require('../includes/dbh.inc.php');
+
+    //write sql to select all users
+    $sql = "SELECT * FROM users";
+
+    //query and get result
+    $result = mysqli_query($conn, $sql);
+
+    //return as associative array
+    $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+    //free result
+    mysqli_free_result($result);
+
+    //close conection
+    mysqli_close($conn);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +56,21 @@
                     <th>Action</th>
                 </tr>
 
-                <tr>
+                <?php foreach($user as $users): ?>
+                    <?= "<tr><td>".$users['id']."</td>" ?>
+                    <?= "<td>".$users['nameUser']."</td>" ?>
+                    <?= "<td>".$users['emailUser']."</td>" ?>
+                    <?= "<td>".$users['phoneUser']."</td>" ?>
+                    <?= "<td>".$users['date_created']."</td>" ?>
+                    <?= "<td>". "  <a class='delete' href='#'>
+                        <svg width='30' height='30' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <path d='M9 14C6.23858 14 4 16.2386 4 19C4 20.6569 5.34315 22 7 22H17C18.6569 22 20 20.6569 20 19C20 16.2386 17.7614 14 15 14H9Z' fill='#000'/>
+                    <path d='M12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2Z' fill='#000'/>
+                    </svg>
+                    <span>Delete User</span>
+                        </a> " ."</td></tr>" ?>
+                <?php endforeach; ?>
+                <!-- <tr>
                     <td>1</td>
                     <td>John Doe</td>
                     <td>john@gmail.com</td>
@@ -80,7 +112,7 @@
                     <td>2.35 litres</td>
                     <td>5 Seats</td>
                     <td></td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
         </div>
