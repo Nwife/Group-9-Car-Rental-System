@@ -29,9 +29,12 @@
                 </li>
                 <li>
                 <?php if(isset($_SESSION['id'])){
-                    echo "<a id='logout' href='#'>LOGOUT</a>";
+                    echo " <form action='../includes/logout.inc.php' method='POST'>
+                    <input type='submit' value='LOGOUT' name='logout-submit'>
+                    </form>";
                 }else{
-                    echo "<a id='logout' href='#'>RETURN</a>";
+                   
+                    echo "<a id='logout' href='../welcome.php'>RETURN</a>";
                 }
                 ?>
                 </li>
