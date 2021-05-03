@@ -41,7 +41,7 @@
                 </div>
         </div>
 
-        <div class="no">Showing 4 vehicles</div>
+        <div class="no">Showing <?= count($user); ?> users</div>
 
         <div class="tablon">
         <table>
