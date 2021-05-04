@@ -1,0 +1,168 @@
+
+.carintro{
+    background-image: url('cars.jpeg');
+    height: 82vh;
+    position: relative;
+}
+
+.content{
+    position: absolute;
+    color: white;
+    padding-left: 30px;
+    top: 25vh;
+}
+
+.content h1{
+    margin-top: 15px;
+    font-size: 60px;
+    font-weight: 800;
+}
+
+.content h5{
+    font-weight: 500;
+}
+
+.content h6{
+    position: relative;
+    font-size: small;
+    top: 20vh;
+    left: 45vw;
+    color: white;
+}
+
+.content a {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    border-radius: 18px;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: small;
+    margin-top: 15px;
+}
+
+.introtalk{
+    
+    height: 30vh;
+    text-align: center;
+}
+
+.introtalk h2 {
+    padding-top: 60px;
+    font-weight: 800;
+}
+
+.introtalk p {
+    padding-top: 10px;
+}
+
+.cars {
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    min-height: 100vh;
+    padding-left: 90px;
+    padding-right: 30px;
+ 
+}
+
+.cars p {
+    /* padding-left: 30px; */
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.cars p img{
+    position: relative;
+    top: 7px;
+}
+
+.carbook {
+    background-color: rgb(255, 255, 255);
+    float: left;
+    width: 25%;
+    margin-bottom: 40px;
+    /* margin-right: 3px; */
+
+}
+
+.car1 {
+    background-color: cyan;
+    background-image: url('smallcar.jpeg');
+    background-size: cover;
+    height: 200px;
+    width: 320px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.cardetails{
+    background-color:rgb(0, 0, 0);
+    width: 320px;
+    height: 140px;
+    position: relative;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    
+}
+
+.cardetails p{
+    position: absolute;
+    font-size: 15px;
+    color: white;
+}
+
+#one {
+    top: 3px;
+    left: 4px;
+}
+
+#two {
+    top: 3px;
+    left: 210px;
+}
+
+#three {
+    top: 40px;
+    left: 4px;
+    font-size: small;
+    font-weight: 500;
+}
+
+#four {
+    top: 40px;
+    left: 130px;
+    font-size: small;
+    font-weight: 500;
+}
+
+#five{
+    top: 40px;
+    left: 250px;
+    font-size: small;
+    font-weight: 500;
+}
+
+.cardetails button {
+    position: absolute;
+    top: 100px;
+    left: 4px;
+    padding: 5px 5px;
+    background-color: white;
+    color: black;
+    font-weight: 700;
+    border-style: none;
+    border-radius: 3px;
+    font-size: small;
+}
+
+.cardetails button a{
+    text-decoration: none;
+    color: black;
+}
+
+footer {
+    margin-top: 200px;
+    height: 9vh;
+    background-color: rgb(92, 90, 90);
+}

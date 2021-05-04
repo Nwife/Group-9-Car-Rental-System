@@ -1,0 +1,64 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+
+
+header {
+    height: 9vh;
+    background-color: rgb(0, 0, 0);
+}
+
+.logo {
+    float: left;
+    line-height: 70px;
+    padding-left: 30px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.logo a{
+    color: white;
+    text-decoration: none;
+}
+
+span{
+    color: white;
+}
+
+nav {
+    float: right;
+    padding-right: 30px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 70px;
+    margin-left: 60px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.image {
+    position: absolute;
+    top: 20px;
+    right: 275px;
+
+}
+
+#logout {
+    background-color: white;
+    color: black;
+    padding: 5px 5px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+body {
+    height: 100vh;
+}
