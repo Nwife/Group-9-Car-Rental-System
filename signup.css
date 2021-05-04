@@ -1,8 +1,8 @@
-*{
+z*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Montserrat, sans-serif;
+    font-family: Montserrat, sans-serif;;
 }
 
 body{
@@ -20,7 +20,7 @@ body{
   
 .backgroundimage {
     position: relative;
-    /* background-color: blue; */
+    background-color: blue;
     height: 82vh;
     background-image: url('carsignin.jpg');
     background-size: cover;
@@ -30,7 +30,12 @@ body{
     position: absolute;
     color: white;
     top: 28vh;
-    left: 15vh;  
+    left: 8vh;  
+}
+
+.text h5 {
+    margin-bottom: 5px;
+    font-weight: 400;
 }
 
 .text h1 {
@@ -40,7 +45,7 @@ body{
 }
   
 .formparent {
-    /* background-color: rgb(255, 255, 255); */
+    background-color: rgb(255, 255, 255);
     height: 82vh;
     position: relative;
     border-top: 2px solid purple;
@@ -51,16 +56,16 @@ form{
     padding: 20px 20px;
     height: 70vh;
     width: 65vh;
-    /* background-color: rgb(255, 255, 255); */
-    top: 5vh;
+    background-color: rgb(255, 255, 255);
+    top: 2vh;
     left: 28vh;  
 
 }
 
 label{
      display: inline-block;
-     margin-bottom: 5px;
-     margin-top: 11px;
+     margin-bottom: 10px;
+     margin-top: 1px;
      color: black;
      font-size: medium;
 }
@@ -73,35 +78,39 @@ input{
     width: 300px;
     padding: 9px 13px;
     border-radius: 3px;
-    margin-bottom: 10px;
+    margin-bottom: 24px;
     /* border-style: 1px solid rgb(170, 100, 170); */
 }
 
-.message-text{
-    width: 300px;
-    height: 100px;
-    border-radius: 3px;
-    border-style: 3px solid black;
-}
-
-textarea{
-    border-style: 3px solid black;  
-}
 
 .submit-button {
-    margin-top: 40px;
-    background-color: rgb(8, 8, 8);
+    padding: 9px 13px;
+    margin-top: 20px;
+    background-color: rgb(170, 100, 170);
     color: white;
     border: none;
 }
 
-footer {
-    /* margin-top: 200px; */
-    height: 9vh;
-    background-color: rgb(0, 0, 0);
+.account {
+    display: block;
+    margin-top: 15px;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: underline;
 }
 
+.signuperror{
+    color: red;
+    margin-left: 80px;
+    margin-bottom: 5px;
+}
 
+.signupsuccess{
+    color: rgb(185, 86, 185);
+    margin-left: 80px;
+    margin-bottom: 5px;
+}
 
 
 

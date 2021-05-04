@@ -1,5 +1,24 @@
 <?php require('mainheader.php'); ?>
 
+<?php
+    require('../includes/dbh.inc.php');
+
+    //write sql to fetch cars
+    $sql2 = "SELECT * FROM cars";
+
+    //query the sql
+    $resultCar = mysqli_query($conn, $sql2);
+
+    //return as associative array
+    $rowCar = mysqli_fetch_all($resultCar, MYSQLI_ASSOC);
+
+    //free result
+    mysqli_free_result($resultCar);
+
+    //close conection
+    mysqli_close($conn);
+?>
+
     <?php echo "<link rel='stylesheet' href='index.css'>" ?>
 
     <div class="carintro">
@@ -27,26 +46,28 @@
     <div class="cars">
         <p><img src="profile-user.png"> Vehicles Available For Rent</p>
 
+        <?php foreach($rowCar as $car): ?>
         <div class="carbook">
-
-            <div class="car1">
-                Hello
+        
+            <div class="car1" style= "background-image: url('../images/<?= $car["imgFullNameCar"]; ?>')">
 
             </div>
             <div class="cardetails">
-                <p id="one">LAMBORGHINI</p>
-                <p id="two">N23,000/Day</p>
-                <p id="three"><img src="profile-user.png"> 2.3litres</p>
-                <p id="four"><img src="profile-user.png"> 4 seats</p>
-                <p id="five"><img src="profile-user.png"> 2019</p>
+                <p id="one"><?= $car["carName"]; ?></p>
+                <p id="two"><?= $car["carPrice"] . "/Day";?></p>
+                <p id="three"><img src="profile-user.png"> <?= $car["carFuel"] . " litres"; ?></p>
+                <p id="four"><img src="profile-user.png"> <?= $car["carSeats"] . " seats"; ?></p>
+                <p id="five"><img src="profile-user.png"> <?= $car["carYear"]; ?></p>
                 <button><a href="details.php">VIEW DETAILS</a></button>
             </div>
 
+            
         </div>
+        <?php endforeach; ?>
 
 
         
-        <div class="carbook">
+        <!-- <div class="carbook">
 
             <div class="car1">
                 Hello
@@ -61,10 +82,10 @@
                 <button>VIEW DETAILS</button>
             </div>
 
-        </div>
+        </div> -->
 
         
-        <div class="carbook">
+        <!-- <div class="carbook">
 
             <div class="car1">
                 Hello
@@ -113,7 +134,7 @@
 
         </div>
 
-        
+         -->
 
 
         

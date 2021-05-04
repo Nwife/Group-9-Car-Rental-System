@@ -88,12 +88,13 @@
 
 .car1 {
     background-color: cyan;
-    background-image: url('smallcar.jpeg');
+    /* background-image: url('smallcar.jpeg'); */
     background-size: cover;
-    height: 200px;
+    height: 220px;
     width: 320px;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
+    border: 1px solid black;
 }
 
 .cardetails{

@@ -15,7 +15,4 @@
   </div>
 
 
-
-
-
 <?php require('mainfooter.php'); ?>

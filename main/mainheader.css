@@ -30,7 +30,7 @@ span{
 
 nav {
     float: right;
-    padding-right: 30px;
+    padding-right: 45px;
 }
 
 nav ul li {
@@ -44,19 +44,34 @@ nav ul li a {
     text-decoration: none;
 }
 
-.image {
-    position: absolute;
-    top: 20px;
-    right: 275px;
+.newflex{
+    display: flex;
+    
+}
+
+header nav ul li svg {
+    /* position: absolute;
+    top: 20px; */
+    /* right: 290px; */
+    margin-right: 5px;
+    
 
 }
 
 #logout {
     background-color: white;
     color: black;
-    padding: 5px 5px;
+    padding: 12px 12px;
     border-radius: 4px;
     font-weight: 600;
+}
+
+header nav ul li input{
+    background-color: white;
+    color: black;
+    padding: 5px 5px;
+    border-radius: 4px;
+    font-weight: 600; 
 }
 
 body {

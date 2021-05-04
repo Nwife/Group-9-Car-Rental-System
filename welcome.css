@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+
+body{
+    height: 100vh;
+}
+
+main{
+    height: 82vh;
+    /* background-color: rgb(255, 255, 255); */
+    background-image: url('cars.jpeg');
+}
+
+.title{
+    text-align: center;
+    /* background-color: rgb(255, 255, 255); */
+    padding: 110px 100px;
+    color: white;
+
+}
+
+.title p{
+    margin-top: 30px;
+    font-weight: 500;
+    color: white;
+}
+
+.icons {
+    padding: 0 40px 0 640px;
+    margin-top: 10px;
+    height: 300px;
+    /* background-color: rgb(255, 255, 255); */
+
+}
+
+.icon {
+    float: left;
+    margin-top: -50px;
+    margin-right: 90px;
+}
+
+.icon h4{
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+}
+
+footer {
+    height: 9vh;
+    background-color: rgb(107, 106, 106);
+}
+
+

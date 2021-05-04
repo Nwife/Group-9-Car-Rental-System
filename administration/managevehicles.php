@@ -1,5 +1,24 @@
 <?php echo "<link rel='stylesheet' href='adminindex.css'>" ?>
 
+<?php
+    require('../includes/dbh.inc.php');
+
+    //write sql to fetch cars
+    $sql2 = "SELECT * FROM cars";
+
+    //query the sql
+    $resultCar = mysqli_query($conn, $sql2);
+
+    //return as associative array
+    $rowCar = mysqli_fetch_all($resultCar, MYSQLI_ASSOC);
+
+    //free result
+    mysqli_free_result($resultCar);
+
+    //close conection
+    mysqli_close($conn);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,12 +62,36 @@
                     <th>S/N</th>
                     <th>Name of vehicle</th>
                     <th>Price per day</th>
-                    <th>Fuel Capacity</th>
+                    <th>Fuel Capacity(Ltrs)</th>
                     <th>No Of Seats</th>
                     <th>Year</th>
                     <th>Action</th>
                 </tr>
-                <tr>
+
+                <?php foreach($rowCar as $cars): ?>
+                    <?= "<tr><td>".$cars['carID']."</td>" ?>
+                    <?= "<td>".$cars['carName']."</td>" ?>
+                    <?= "<td>".$cars['carPrice']."</td>" ?>
+                    <?= "<td>".$cars['carFuel']."</td>" ?>
+                    <?= "<td>".$cars['carSeats']."</td>" ?>
+                    <?= "<td>".$cars['carYear']."</td>" ?>
+                    <?= "<td class='edits'>" . "
+                        <a href='#'>
+                        <svg width='30' height='30' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                        <path d='M9 14C6.23858 14 4 16.2386 4 19C4 20.6569 5.34315 22 7 22H17C18.6569 22 20 20.6569 20 19C20 16.2386 17.7614 14 15 14H9Z' fill='#000'/>
+                        <path d='M12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2Z' fill='#000'/>
+                        </svg>
+                        <a>" . "
+                        
+                        <a href='#'>
+                        <svg width='30' height='30' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                        <path d='M9 14C6.23858 14 4 16.2386 4 19C4 20.6569 5.34315 22 7 22H17C18.6569 22 20 20.6569 20 19C20 16.2386 17.7614 14 15 14H9Z' fill='#000'/>
+                        <path d='M12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2Z' fill='#000'/>
+                        </svg>
+                        </a> " . 
+                    "</td></tr>"?>
+                <?php endforeach; ?>
+                <!-- <tr>
                     <td>1</td>
                     <td>Mercedes Benz</td>
                     <td>14,000 naira</td>
@@ -100,7 +143,7 @@
                     <td>5 Seats</td>
                     <td>2018</td>
                     <td></td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
         </div>

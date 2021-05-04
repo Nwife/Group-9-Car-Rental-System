@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+
+
+header {
+    height: 9vh;
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+}
+
+.logo {
+    float: left;
+    line-height: 70px;
+    padding-left: 30px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.logo a{
+    color: purple;
+}
+
+a {
+    text-decoration: none;
+}
+
+.register {
+    float: right;
+    line-height: 70px;
+    padding-right: 30px;
+}
+
+.register button {
+    padding: 12px 20px;
+    border-radius: 3px;
+    background-color: purple;
+}
+
+
+.register button a {
+    color: white;
+    
+}
+
+footer {
+    height: 9vh;
+    background-color: rgb(107, 106, 106);
+}

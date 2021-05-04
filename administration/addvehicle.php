@@ -24,7 +24,7 @@
                 </div>
         </div>
 
-        <form action="#" method="POST" enctype="multipart/form-data">
+        <form action="../includes/addvehicle.inc.php" method="POST" enctype="multipart/form-data">
 
             <div class="section1">
 
@@ -35,22 +35,22 @@
 
                 <div class="innerform">
                     <label for="">PRICE PER DAY</label>
-                    <input type="text" name="carname" id="">
+                    <input type="text" name="carprice" id="">
                 </div>
 
                 <div class="innerform">
                     <label for="">FUEL CAPACITY</label>
-                    <input type="text" name="carname" id="">
+                    <input type="text" name="carfuel" id="">
                 </div>
 
                 <div class="innerform">
                     <label for="">NO OF SEATS</label>
-                    <input type="text" name="carname" id="">
+                    <input type="text" name="carseats" id="">
                 </div>
 
                 <div class="innerform">
                     <label for="">YEAR</label>
-                    <input type="text" name="carname" id="">
+                    <input type="text" name="caryear" id="">
                 </div>
 
             </div>
@@ -58,17 +58,17 @@
             <div class="section2">
                 <div class="outerform">
                     <label for="">VEHICLE DESCRIPTION</label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <textarea name="cardesc" id="" cols="30" rows="10"></textarea>
                 </div>
 
                 <div class="outerform part2">
                     <label for="">VEHICLE IMAGE</label>
-                    <input type="file" name="" id="" value="Choose image">
+                    <input type="file" name="file" id="" value="Choose image">
                 </div>
             </div>
 
             <div class="add">
-                <input type="submit" value="ADD CAR">
+                <input type="submit" name="car-submit" value="ADD CAR">
             </div>
 
 
