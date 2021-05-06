@@ -24,6 +24,34 @@
                 </div>
         </div>
 
+        <?php
+                if(isset($_GET['error'])){
+                    if($_GET['error'] == "emptyfields"){
+                        echo '<p class ="vehicleerror"> Fill in all fields!</p>';
+                    }
+                    elseif($_GET['error'] == "queryerror"){
+                        echo '<p class ="vehicleerror"> A database error occurred try again</p>';
+                    }
+                    elseif($_GET['error'] == "filebig"){
+                        echo '<p class ="vehicleerror"> Image size too big!</p>';
+                    }
+                    elseif($_GET['error'] == "fileerror"){
+                        echo '<p class ="vehicleerror"> An error occurred while uploading image</p>';
+                    }
+                    elseif($_GET['error'] == "wrongfiletype"){
+                        echo '<p class ="vehicleerror"> File should be an image</p>';
+                    }
+                    elseif($_GET['error'] == "mailtaken"){
+                        echo '<p class ="vehicleerror"> Email is already registered!</p>';
+                    }
+                }
+                elseif(isset($_GET['upload'])){
+                    if($_GET['upload'] == "success"){
+                        echo '<p class ="vehicleerror">Vehicle added</p>';
+                    }
+                }
+                
+        ?>
         <form action="../includes/addvehicle.inc.php" method="POST" enctype="multipart/form-data">
 
             <div class="section1">

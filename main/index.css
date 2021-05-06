@@ -3,6 +3,7 @@
     background-image: url('cars.jpeg');
     height: 82vh;
     position: relative;
+    background-size: cover;
 }
 
 .content{

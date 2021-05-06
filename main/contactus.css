@@ -101,6 +101,16 @@ footer {
     background-color: rgb(0, 0, 0);
 }
 
+.contacterror{
+    color: red;
+    margin-left: 100px;
+}
+
+.contactsuccess{
+    color: purple;
+    margin-left: 100px;
+}
+
 
 
 

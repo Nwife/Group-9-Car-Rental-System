@@ -8,6 +8,7 @@ main{
     height: 82vh;
     /* background-color: rgb(255, 255, 255); */
     background-image: url('cars.jpeg');
+    background-size: cover;
     /* position: absolute; */
 }
 
@@ -24,10 +25,10 @@ form{
     /* text-align: center; */
     position: relative;
     top: -9vh;
-    left: 3vh;
+    left: 13vh;
     
     margin-left: 600px;
-    margin-right: 650px;
+    margin-right: 825px;
     padding: 20px 20px 40px 20px;
 }
 

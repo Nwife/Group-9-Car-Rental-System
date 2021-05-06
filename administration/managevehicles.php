@@ -52,7 +52,7 @@
                 </div>
         </div>
 
-        <div class="no">Showing 4 vehicles</div>
+        <div class="no">Showing <?= count($rowCar) ?> vehicles</div>
 
         <div class="tablon">
         <table>
@@ -69,27 +69,26 @@
                 </tr>
 
                 <?php foreach($rowCar as $cars): ?>
-                    <?= "<tr><td>".$cars['carID']."</td>" ?>
-                    <?= "<td>".$cars['carName']."</td>" ?>
-                    <?= "<td>".$cars['carPrice']."</td>" ?>
-                    <?= "<td>".$cars['carFuel']."</td>" ?>
-                    <?= "<td>".$cars['carSeats']."</td>" ?>
-                    <?= "<td>".$cars['carYear']."</td>" ?>
-                    <?= "<td class='edits'>" . "
-                        <a href='#'>
-                        <svg width='30' height='30' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                        <path d='M9 14C6.23858 14 4 16.2386 4 19C4 20.6569 5.34315 22 7 22H17C18.6569 22 20 20.6569 20 19C20 16.2386 17.7614 14 15 14H9Z' fill='#000'/>
-                        <path d='M12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2Z' fill='#000'/>
-                        </svg>
-                        <a>" . "
+                    <tr><td><?= $cars['carID']; ?></td>
+                    <td><?= $cars['carName']; ?></td>
+                    <td><?= $cars['carPrice']; ?></td>
+                    <td><?= $cars['carFuel']; ?></td>
+                    <td><?= $cars['carSeats']; ?></td>
+                    <td><?= $cars['carYear']; ?></td>
+                    <td class='edits'>
+                        <form class="deleteform" action="../includes/deletecar.inc.php" method="POST">
+                            <input type="hidden" name="carid" value="<?= $cars['carID']; ?>">
+                            <button class="deletecar deletecar2" type="submit" name="deletecar-submit">
+                            <svg id="trash" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 19.991 23.385">
+                            <path id="Path_38" data-name="Path 38" d="M66.069,2.923H61.84V2.192A2.252,2.252,0,0,0,59.533,0H56.458a2.252,2.252,0,0,0-2.307,2.192v.731H49.922A1.876,1.876,0,0,0,48,4.75V6.212a.751.751,0,0,0,.769.731H67.222a.751.751,0,0,0,.769-.731V4.75A1.876,1.876,0,0,0,66.069,2.923Zm-10.38-.731a.752.752,0,0,1,.769-.731h3.076a.752.752,0,0,1,.769.731v.731H55.689Z" transform="translate(-48)" fill="#000"/>
+                            <path id="Path_39" data-name="Path 39" d="M73.6,184a.234.234,0,0,0-.24.239L74,196.893a2.256,2.256,0,0,0,2.3,2.088H87.979a2.256,2.256,0,0,0,2.3-2.088l.634-12.653a.234.234,0,0,0-.24-.239Zm11.612,1.827a.77.77,0,0,1,1.538,0v9.5a.77.77,0,0,1-1.538,0Zm-3.844,0a.77.77,0,0,1,1.538,0v9.5a.77.77,0,0,1-1.538,0Zm-3.844,0a.77.77,0,0,1,1.538,0v9.5a.77.77,0,0,1-1.538,0Z" transform="translate(-72.145 -175.596)" fill="#000"/>
+                            </svg>
+                            </button>
+                        </form>
                         
-                        <a href='#'>
-                        <svg width='30' height='30' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                        <path d='M9 14C6.23858 14 4 16.2386 4 19C4 20.6569 5.34315 22 7 22H17C18.6569 22 20 20.6569 20 19C20 16.2386 17.7614 14 15 14H9Z' fill='#000'/>
-                        <path d='M12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2Z' fill='#000'/>
-                        </svg>
-                        </a> " . 
-                    "</td></tr>"?>
+                        
+                        
+                    </td></tr>
                 <?php endforeach; ?>
                 <!-- <tr>
                     <td>1</td>

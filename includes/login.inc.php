@@ -1,5 +1,4 @@
 <?php
-
 if(isset($_POST["login-submit"])){
 
     require('dbh.inc.php');
@@ -29,6 +28,7 @@ if(isset($_POST["login-submit"])){
                     session_start();
                     $_SESSION['id'] = $row["id"];
                     $_SESSION['name'] = $row["nameUser"];
+                    $_SESSION['email'] = $row["emailUser"];
 
                     
                     header("Location: ../main?login=success");

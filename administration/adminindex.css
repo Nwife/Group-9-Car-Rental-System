@@ -77,6 +77,14 @@
     display: flex;
 }
 
+header a{
+  margin-left: 15px;
+  background-image: linear-gradient(rgb(114, 41, 114), black);
+  color: white;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
   .main h4 svg{
     margin-right: 10px;
 }
@@ -149,7 +157,8 @@
 .no{
   margin-top: 10px;
   padding-left: 14px;
-  font-size: small;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .tablon{
@@ -195,11 +204,13 @@ table tr:nth-of-type(odd){
   align-items: center;
   text-decoration: none;
   color: black;
+  border: none;
+  background: transparent;
 }
 
-.delete svg{
+/* .delete svg{
   margin-right: 10px;
-}
+} */
 
 /* style for add vehicle*/
 form{
@@ -274,4 +285,39 @@ form{
   border-radius: 3px;
   font-size: 13px;
   background-color: rgb(88, 39, 88);
+}
+
+.span1{
+  border-radius: 50%;
+  background-color: rgb(194, 163, 194);
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.span2{
+  font-weight: 700;
+}
+
+/* styling for delting form*/
+.deleteform{
+  margin-top: 0;
+}
+
+.deletecar{
+  border-radius: 50%;
+}
+
+.deletecar2{
+  width: 35px;
+  height: 35px;
+}
+
+/* style for add vehicle error*/
+.vehicleerror{
+  text-align: center;
+  color: purple;
 }

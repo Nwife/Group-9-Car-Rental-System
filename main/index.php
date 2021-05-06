@@ -58,7 +58,7 @@
                 <p id="three"><img src="profile-user.png"> <?= $car["carFuel"] . " litres"; ?></p>
                 <p id="four"><img src="profile-user.png"> <?= $car["carSeats"] . " seats"; ?></p>
                 <p id="five"><img src="profile-user.png"> <?= $car["carYear"]; ?></p>
-                <button><a href="details.php">VIEW DETAILS</a></button>
+                <button><a href="details.php?id=<?= $car['carID']; ?>">VIEW DETAILS</a></button>
             </div>
 
             

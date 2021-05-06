@@ -1,5 +1,25 @@
 <?php echo "<link rel='stylesheet' href='adminindex.css'>" ?>
 
+<?php
+    require('../includes/dbh.inc.php');
+
+    //write sql to fetch cars
+    $sql3 = "SELECT * FROM bookings";
+
+    //query the sql
+    $resultBook = mysqli_query($conn, $sql3);
+
+    //return as associative array
+    $rowBook = mysqli_fetch_all($resultBook, MYSQLI_ASSOC);
+
+    //free result
+    mysqli_free_result($resultBook);
+
+    //close conection
+    mysqli_close($conn);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +44,7 @@
                 </div>
         </div>
 
-        <div class="no">Showing 5 Bookings</div>
+        <div class="no">Showing <?= count($rowBook); ?> Bookings</div>
 
         <div class="tablon">
         <table>
@@ -39,7 +59,18 @@
                     <th>To(date)</th>
                 </tr>
 
-                <tr>
+
+                <?php foreach($rowBook as $book): ?>
+                    <?= "<tr><td>".$book['bookID']."</td>" ?>
+                    <?= "<td>".$book['bookName']."</td>" ?>
+                    <?= "<td>".$book['bookEmail']."</td>" ?>
+                    <?= "<td>".$book['bookVehicle']."</td>" ?>
+                    <?= "<td>".$book['bookStart']."</td>" ?>
+                    <?= "<td>".$book['bookEnd']."</td></tr>" ?>
+                <?php endforeach; ?>
+
+
+                <!-- <tr>
                     <td>1</td>
                     <td>Isioma John</td>
                     <td>isioma@gmail.com</td>
@@ -64,7 +95,7 @@
                     <td>Keke</td>
                     <td>25/05/2021</td>
                     <td>29/05/2021</td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
         

@@ -13,6 +13,7 @@ main{
     height: 82vh;
     /* background-color: rgb(255, 255, 255); */
     background-image: url('cars.jpeg');
+    background-size: cover;
 }
 
 .title{
@@ -30,7 +31,7 @@ main{
 }
 
 .icons {
-    padding: 0 40px 0 640px;
+    padding: 0 40px 0 675px;
     margin-top: 10px;
     height: 300px;
     /* background-color: rgb(255, 255, 255); */
