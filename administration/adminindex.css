@@ -75,6 +75,7 @@
 
   header h4 {
     display: flex;
+    align-items: center;
 }
 
 header a{
